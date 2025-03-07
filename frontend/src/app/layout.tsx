@@ -1,8 +1,14 @@
+import React from 'react'
+import './reset.css'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { Providers } from './providers'
+import Navbar from '../components/Navbar'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata = {
   title: 'Rival Radar AI - Competitor Analysis Platform',
@@ -15,22 +21,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className="h-full">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+      <body className={`${inter.className} h-full antialiased`}>
         <Providers>
-          <div className="min-h-screen bg-gray-50">
-            <nav className="bg-white shadow-sm">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between h-16">
-                  <div className="flex">
-                    <div className="flex-shrink-0 flex items-center">
-                      <span className="text-2xl font-bold text-primary-600">Rival Radar AI</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </nav>
-            <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+          <div className="min-h-screen bg-apple-gray-50">
+            <Navbar />
+            <main className="apple-container py-6">
               {children}
             </main>
           </div>

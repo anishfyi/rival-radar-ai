@@ -2,18 +2,19 @@ Django==5.0.2
 djangorestframework==3.14.0
 django-cors-headers==4.3.1
 django-environ==0.11.2
-psycopg2-binary==2.9.9
-celery==5.3.6
-google-generativeai==0.3.2
 python-dotenv==1.0.1
 requests==2.31.0
-pandas==2.2.0
-numpy==1.26.3
-scikit-learn==1.4.0
-beautifulsoup4==4.12.3
-aiohttp==3.9.3
-python-jose==3.3.0
-django-rest-auth==0.9.5
-django-allauth==0.61.1
-gunicorn==21.2.0
-whitenoise==6.6.0 
+google-generativeai==0.3.2
+whitenoise==6.6.0
+djangorestframework-simplejwt==5.3.1
+
+# The following packages are optional and can be installed later if needed
+# psycopg2-binary==2.9.9  # For PostgreSQL support
+# celery==5.3.6  # For async tasks
+# pandas==2.2.0  # For data analysis
+# numpy==1.26.3  # For numerical operations
+# scikit-learn==1.4.0  # For machine learning
+# beautifulsoup4==4.12.3  # For web scraping
+# aiohttp==3.9.3  # For async HTTP requests
+# python-jose==3.3.0  # For JWT
+# gunicorn==21.2.0  # For production deployment 
